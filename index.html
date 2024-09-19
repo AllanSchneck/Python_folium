@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_922dc59b834f2eba04913f752363545a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_922dc59b834f2eba04913f752363545a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_922dc59b834f2eba04913f752363545a = L.map(
+                "map_922dc59b834f2eba04913f752363545a",
+                {
+                    center: [31.214, 29.891],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 5,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_922dc59b834f2eba04913f752363545a);
+
+            
+
+        
+    
+            var tile_layer_6a0abdbbe09f20590987605290697487 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var tile_layer_df405b9048e14180e7c9675cdd7dddc2 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var tile_layer_5ae9897a3f1a65da2646e21c456ae873 = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+                {"attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var layer_control_afe2a5efd51a9b38debe38a057bef52b = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_df405b9048e14180e7c9675cdd7dddc2,
+                    "Thunderforest.OpenCycleMap" : tile_layer_5ae9897a3f1a65da2646e21c456ae873,
+                },
+                overlays :  {
+                },
+            };
+            L.control.layers(
+                layer_control_afe2a5efd51a9b38debe38a057bef52b.base_layers,
+                layer_control_afe2a5efd51a9b38debe38a057bef52b.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+            tile_layer_5ae9897a3f1a65da2646e21c456ae873.remove();
+        
+    
+            var marker_f1122d8c20744c3d48b57a26f9fe6fe2 = L.marker(
+                [29.979, 31.134],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_1d9b0fa4ab84e09588aa7890e7b20916 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_f1122d8c20744c3d48b57a26f9fe6fe2.setIcon(icon_1d9b0fa4ab84e09588aa7890e7b20916);
+        
+    
+        var popup_a42625c6551e15284cbb43f2e87d215e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1f52864f24f000b3a63e50431682c868 = $(`<div id="html_1f52864f24f000b3a63e50431682c868" style="width: 100.0%; height: 100.0%;">Grande Pirâmide de Gizé, no Egito</div>`)[0];
+            popup_a42625c6551e15284cbb43f2e87d215e.setContent(html_1f52864f24f000b3a63e50431682c868);
+        
+
+        marker_f1122d8c20744c3d48b57a26f9fe6fe2.bindPopup(popup_a42625c6551e15284cbb43f2e87d215e)
+        ;
+
+        
+    
+    
+            marker_f1122d8c20744c3d48b57a26f9fe6fe2.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e94a600703bcccde4ba59c420d23dfc6 = L.marker(
+                [32.544, 44.42],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_d83941583aa3df146e85629c71bc7a08 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_e94a600703bcccde4ba59c420d23dfc6.setIcon(icon_d83941583aa3df146e85629c71bc7a08);
+        
+    
+        var popup_0e701db0c768b108b9032febd65fa5a1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_338d001de7dfffb61f985105510ca762 = $(`<div id="html_338d001de7dfffb61f985105510ca762" style="width: 100.0%; height: 100.0%;">Jardins Suspensos da Babilônia</div>`)[0];
+            popup_0e701db0c768b108b9032febd65fa5a1.setContent(html_338d001de7dfffb61f985105510ca762);
+        
+
+        marker_e94a600703bcccde4ba59c420d23dfc6.bindPopup(popup_0e701db0c768b108b9032febd65fa5a1)
+        ;
+
+        
+    
+    
+            marker_e94a600703bcccde4ba59c420d23dfc6.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8641ee05fa8776acd55241a9da113190 = L.marker(
+                [37.949, 27.363],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_d7cffb375ad6fc005c1e9bb3779d0c8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_8641ee05fa8776acd55241a9da113190.setIcon(icon_d7cffb375ad6fc005c1e9bb3779d0c8b);
+        
+    
+        var popup_fa23e0ac02c005de338b58d51458e42a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69df218b9ef8051b98ee8e7b05223ffb = $(`<div id="html_69df218b9ef8051b98ee8e7b05223ffb" style="width: 100.0%; height: 100.0%;">Templo de Ártemis, em Éfeso</div>`)[0];
+            popup_fa23e0ac02c005de338b58d51458e42a.setContent(html_69df218b9ef8051b98ee8e7b05223ffb);
+        
+
+        marker_8641ee05fa8776acd55241a9da113190.bindPopup(popup_fa23e0ac02c005de338b58d51458e42a)
+        ;
+
+        
+    
+    
+            marker_8641ee05fa8776acd55241a9da113190.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_85e83bd2cf42cb94da79eebe8a4eac5a = L.marker(
+                [37.637, 21.63],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_02b3764ca1a514c26347964bba9bf2a4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_85e83bd2cf42cb94da79eebe8a4eac5a.setIcon(icon_02b3764ca1a514c26347964bba9bf2a4);
+        
+    
+        var popup_f3305e97253069eb80c4cb631ceb6657 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d7e2536bb7b3df0cb9bf3a8a3fcbcd17 = $(`<div id="html_d7e2536bb7b3df0cb9bf3a8a3fcbcd17" style="width: 100.0%; height: 100.0%;">Estátua de Zeus, em Olímpia</div>`)[0];
+            popup_f3305e97253069eb80c4cb631ceb6657.setContent(html_d7e2536bb7b3df0cb9bf3a8a3fcbcd17);
+        
+
+        marker_85e83bd2cf42cb94da79eebe8a4eac5a.bindPopup(popup_f3305e97253069eb80c4cb631ceb6657)
+        ;
+
+        
+    
+    
+            marker_85e83bd2cf42cb94da79eebe8a4eac5a.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_05d2eb54c0ff75f15dffbfc3f4ef0ee3 = L.marker(
+                [37.037, 27.424],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_b196ba638eda20c7248de96ae148e7c5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_05d2eb54c0ff75f15dffbfc3f4ef0ee3.setIcon(icon_b196ba638eda20c7248de96ae148e7c5);
+        
+    
+        var popup_52c54c8cd63e58dac167fcc9ea711714 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c761891f0a38a7f3c3e77a6fd0edc45 = $(`<div id="html_3c761891f0a38a7f3c3e77a6fd0edc45" style="width: 100.0%; height: 100.0%;">Mausoléu de Halicarnasso</div>`)[0];
+            popup_52c54c8cd63e58dac167fcc9ea711714.setContent(html_3c761891f0a38a7f3c3e77a6fd0edc45);
+        
+
+        marker_05d2eb54c0ff75f15dffbfc3f4ef0ee3.bindPopup(popup_52c54c8cd63e58dac167fcc9ea711714)
+        ;
+
+        
+    
+    
+            marker_05d2eb54c0ff75f15dffbfc3f4ef0ee3.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2c5e50b2bf33998df0245bb94f70deba = L.marker(
+                [36.451, 28.227],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_a5e95d0f0b68e6803d72901c4558282e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_2c5e50b2bf33998df0245bb94f70deba.setIcon(icon_a5e95d0f0b68e6803d72901c4558282e);
+        
+    
+        var popup_5b6d009807ee48eafd8a81aa653e3186 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc5c1deb91077e43ff0dad48a37bc557 = $(`<div id="html_bc5c1deb91077e43ff0dad48a37bc557" style="width: 100.0%; height: 100.0%;">Colosso de Rodes</div>`)[0];
+            popup_5b6d009807ee48eafd8a81aa653e3186.setContent(html_bc5c1deb91077e43ff0dad48a37bc557);
+        
+
+        marker_2c5e50b2bf33998df0245bb94f70deba.bindPopup(popup_5b6d009807ee48eafd8a81aa653e3186)
+        ;
+
+        
+    
+    
+            marker_2c5e50b2bf33998df0245bb94f70deba.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_26d1dc398179d3f5431019b180335599 = L.marker(
+                [31.214, 29.891],
+                {}
+            ).addTo(map_922dc59b834f2eba04913f752363545a);
+        
+    
+            var icon_5cf59e39be551bf8d89260c1f722f440 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-picture", "iconColor": "white", "markerColor": "black", "prefix": "glyphicon"}
+            );
+            marker_26d1dc398179d3f5431019b180335599.setIcon(icon_5cf59e39be551bf8d89260c1f722f440);
+        
+    
+        var popup_c950aeb87a7871e1f5146e12f1f6f399 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6bb8cfc52ab87093ecff678a8c06989d = $(`<div id="html_6bb8cfc52ab87093ecff678a8c06989d" style="width: 100.0%; height: 100.0%;">Farol de Alexandria</div>`)[0];
+            popup_c950aeb87a7871e1f5146e12f1f6f399.setContent(html_6bb8cfc52ab87093ecff678a8c06989d);
+        
+
+        marker_26d1dc398179d3f5431019b180335599.bindPopup(popup_c950aeb87a7871e1f5146e12f1f6f399)
+        ;
+
+        
+    
+    
+            marker_26d1dc398179d3f5431019b180335599.bindTooltip(
+                `<div>
+                     Veja
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+                var lat_lng_popup_87105a9fa8f6d9989e373e3162531e58 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_87105a9fa8f6d9989e373e3162531e58
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_922dc59b834f2eba04913f752363545a);
+                    }
+                map_922dc59b834f2eba04913f752363545a.on('click', latLngPop);
+            
+</script>
+</html>
